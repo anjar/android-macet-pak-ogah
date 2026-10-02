@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77989bee4794af2c81e2b729e5480c7d, type: 3}
+  m_Name: Level1
+  m_EditorClassIdentifier:
+  levelNumber: 1
+  difficulty: 0
+  instruction: "Tap mobil depan. Tunggu jalur kosong, lalu tap mobil berikutnya."
+  expectedMoves: 2
+  expectedDuration: 12
+  mechanics:
+  - tap
+  - queue
+  intendedSolution:
+  - A
+  - B
+  nodes:
+  - id: A
+    position: {x: 0, y: 0, z: -2.5}
+    isExit: 0
+  - id: B
+    position: {x: 0, y: 0, z: -4.5}
+    isExit: 0
+  - id: X
+    position: {x: 0, y: 0, z: 0}
+    isExit: 0
+  - id: N
+    position: {x: 0, y: 0, z: 7}
+    isExit: 1
+  roads:
+  - from: {x: 0, y: 0, z: -7}
+    to: {x: 0, y: 0, z: 7}
+    width: 2.4
+  - from: {x: -6, y: 0, z: 0}
+    to: {x: 0, y: 0, z: 0}
+    width: 2.4
+  vehicles:
+  - id: A
+    entityType: 0
+    speed: 2.8
+    color: {r: 1, g: 0.76, b: 0.18, a: 1}
+    route:
+    - A
+    - X
+    - N
+  - id: B
+    entityType: 0
+    speed: 2.8
+    color: {r: 0.16, g: 0.65, b: 0.9, a: 1}
+    route:
+    - B
+    - X
+    - N
